@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+#main-doc {
+  max-width: 77vw;
+  padding: 25px;
+}
+header {
+  position: static;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 23vw;
+  border-right: 3px solid #0a0a23;
+}
+
+#navbar {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 25px 5px;
+  margin: 0 auto;
+  padding: 0 40px;
+  align-content: center;
+}
+#navbar a {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 10px auto;
+  text-decoration: none;
+}
