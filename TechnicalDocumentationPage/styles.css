@@ -1,40 +1,106 @@
+/* Reset default styles */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* Base styles */
 html {
   font-size: 16px;
 }
+
 body {
-  margin: 0;
-  padding: 0;
   display: flex;
-}
-#main-doc {
-  max-width: 77vw;
-  padding: 25px;
-}
-header {
-  position: static;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 23vw;
-  border-right: 3px solid #0a0a23;
+  color: #18181b;
+  font-family: Arial, sans-serif;
 }
 
+/* Navbar */
 #navbar {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  padding: 25px 5px;
-  margin: 0 auto;
-  padding: 0 40px;
-  align-content: center;
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
 }
+
+#navbar h1 {
+  color: #334155;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
 #navbar a {
   display: block;
-  width: 100%;
-  font-size: 1.5rem;
-  margin: 10px auto;
+  padding: 10px 20px;
   text-decoration: none;
+  color: #334155;
+  border-top: 1px solid #ccc;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+}
+
+/* Main content */
+#main-doc {
+  margin-left: 25%;
+  padding: 40px;
+}
+
+.main-section {
+  margin-bottom: 40px;
+}
+
+.main-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.main-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.main-section ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Code block */
+code {
+  background-color: #e5e7eb;
+  padding: 15px;
+  border-radius: 15px;
+  display: block;
+  overflow-x: auto;
+  margin-top: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    border-right: none;
+  }
+
+  #main-doc {
+    margin-left: 0;
+  }
 }
